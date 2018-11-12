@@ -20,5 +20,7 @@
     "url": "https://github.com/reftoken/blockscope-ui/issues"
   },
   "homepage": "https://github.com/reftoken/blockscope-ui#readme",
-  "devDependencies": {}
+  "devDependencies": {
+    "rollup": "^0.67.1"
+  }
 }
