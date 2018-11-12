@@ -24,5 +24,9 @@
     "@babel/core": "^7.1.5",
     "babel-loader": "^8.0.4",
     "@storybook/react": "^4.0.4",
+  "dependencies": {
+    "react": "^16.6.1",
+    "react-dom": "^16.6.1",
+    "styled-components": "^4.0.3"
   }
 }
