@@ -4,7 +4,6 @@
   "description": "Basic UI (react) components used by the Blockscope team.",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
     "storybook": "start-storybook -p 9001 -c .storybook"
   },
   "repository": {
