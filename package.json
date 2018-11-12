@@ -23,7 +23,6 @@
   "devDependencies": {
     "@babel/core": "^7.1.5",
     "babel-loader": "^8.0.4",
-    "rollup": "^0.67.1"
     "@storybook/react": "^4.0.4",
   }
 }
