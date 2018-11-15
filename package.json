@@ -27,7 +27,8 @@
     "@storybook/addon-actions": "^4.0.4",
     "@storybook/addon-options": "^4.0.4",
     "@storybook/react": "^4.0.4",
-    "babel-loader": "^8.0.4"
+    "babel-loader": "^8.0.4",
+    "babel-plugin-styled-components": "^1.8.0"
   },
   "dependencies": {
     "react": "^16.6.1",
