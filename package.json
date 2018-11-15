@@ -21,7 +21,8 @@
   },
   "homepage": "https://github.com/reftoken/blockscope-ui#readme",
   "devDependencies": {
-    "@babel/core": "^7.1.5",
+    "@babel/core": "^7.1.6",
+    "@babel/preset-env": "^7.1.6",
     "@storybook/addon-actions": "^4.0.4",
     "@storybook/addon-options": "^4.0.4",
     "@storybook/react": "^4.0.4",
