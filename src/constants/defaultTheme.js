@@ -9,10 +9,9 @@ class Colors {
   black = '#000000';
   white = '#ffffff';
   black30 = lighten(0.3, this.black);
+  black54 = lighten(0.54, this.black);
   black90 = lighten(0.9, this.black);
   background = '#fcfdff';
-  /*gray = '#e0e0e0';
-  bluegray = '#607D8B';*/
 }
 
 const defaultTheme = {

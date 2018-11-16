@@ -11,7 +11,7 @@ const Text = styled.p`
       `
       display: inline-block;
       margin-left: 10px;
-      color: #889;
+      color: ${props.theme.black54};
   `};
 `;
 
