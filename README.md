@@ -1,3 +1,8 @@
+# WIP
+
+This library is currently work in progress and marked as an aplha release.
+
+
 # How to use
 
 Comming soon...
