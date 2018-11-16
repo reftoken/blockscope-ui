@@ -7,6 +7,19 @@
     "storybook": "start-storybook -p 9001 -c .storybook",
     "build": "rollup -c"
   },
+  "husky": {
+    "hooks": {
+      "precommit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "*.{js,jsx}": [
+      "prettier --write",
+      "git add",
+      "eslint",
+      "stylelint"
+    ]
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/reftoken/blockscope-ui.git"
@@ -36,6 +49,7 @@
     "eslint-plugin-jsx-a11y": "^6.1.2",
     "eslint-plugin-prettier": "^3.0.0",
     "eslint-plugin-react": "^7.11.1",
+    "husky": "^1.1.4",
     "prettier": "^1.15.2",
     "rollup": "^0.67.1",
     "rollup-plugin-babel": "^4.0.3",
