@@ -29,6 +29,12 @@ storiesOf('List', module).add('Defaul', () => (
       <li>Two</li>
       <li>Three</li>
     </List>
+    <p>With ordered prop</p>
+    <List ordered>
+      <li>One</li>
+      <li>Two</li>
+      <li>Three</li>
+    </List>
   </div>
 ));
 
