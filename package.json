@@ -2,7 +2,7 @@
   "name": "blockscope-ui",
   "version": "0.0.1",
   "description": "Basic UI (react) components used by the Blockscope team.",
-  "main": "index.js",
+  "main": "dist/index.js",
   "scripts": {
     "storybook": "start-storybook -p 9001 -c .storybook",
     "build": "rollup -c"
