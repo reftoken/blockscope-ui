@@ -4,7 +4,8 @@ src
 static
 stories
 .babelrc
-.eslinrc
+.eslintrc
 .gitignore
 .stylelintrc
+.editorconfig
 rollup.config.js
