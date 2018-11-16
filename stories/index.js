@@ -1,6 +1,5 @@
 import React from 'react';
 import { storiesOf } from '@storybook/react';
-import { action } from '@storybook/addon-actions';
 import {
   Spinner,
   MobileMenu,
@@ -20,7 +19,9 @@ storiesOf('Spinner', module)
   .add('Default', () => <Spinner />)
   .add('With text', () => <Spinner>Loading</Spinner>);
 
-storiesOf('MobileMenu', module).add('Default', () => <MobileMenu />);
+storiesOf('MobileMenu', module)
+  .add('Default', () => <MobileMenu />)
+  .add('With props', () => <MobileMenu collapsed />);
 storiesOf('List', module).add('Defaul', () => (
   <div>
     <List>
@@ -33,12 +34,21 @@ storiesOf('List', module).add('Defaul', () => (
 
 storiesOf('Image', module).add('Default', () => <Image src={demoImage} />);
 
-storiesOf('Text', module).add('Default', () => <Text>Hello World!</Text>);
+storiesOf('Text', module)
+  .add('Default', () => <Text>Hello World!</Text>)
+  .add('With props', () => (
+    <div>
+      <p>With error prop:</p>
+      <Text error>Hello World!</Text>
+      <p>With status prop:</p>
+      <Text status>Hello World!</Text>
+    </div>
+  ));
 
 storiesOf('Title', module).add('Default', () => <Title>Hello World!</Title>);
 
 storiesOf('Spin', module).add('Default', () => (
-  <Spin>
+  <Spin animate>
     <Image src={demoImage} />
   </Spin>
 ));
