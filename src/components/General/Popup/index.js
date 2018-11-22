@@ -1,19 +1,19 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { Title } from 'blockscope-ui';
+import { Title } from '../../Elements';
 import Dimmer from './Dimmer';
 import Wrapper from './Wrapper';
 import IconWrapper from './IconWrapper';
-import { CloseIcon } from '../Icons';
+import { CloseIcon } from '../../Icons';
 
 const defaultProps = {
-  title: '',
+  title: ''
 };
 
 const propTypes = {
   title: PropTypes.string,
   children: PropTypes.node.isRequired,
-  onClose: PropTypes.func.isRequired,
+  onClose: PropTypes.func.isRequired
 };
 
 const Popup = ({ title, children, onClose }) => (
