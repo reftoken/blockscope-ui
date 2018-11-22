@@ -2,7 +2,9 @@ import React from 'react';
 import { storiesOf } from '@storybook/react';
 import {
   Spinner,
+  CloseIcon,
   MobileMenu,
+  Popup,
   List,
   Image,
   Text,
@@ -39,6 +41,10 @@ storiesOf('List', module).add('Defaul', () => (
 ));
 
 storiesOf('Image', module).add('Default', () => <Image src={demoImage} />);
+
+storiesOf('Popup', module).add('Default', () => <Popup>Hell world</Popup>);
+
+storiesOf('Icons', module).add('Default', () => <CloseIcon fill="black" />);
 
 storiesOf('Text', module)
   .add('Default', () => <Text>Hello World!</Text>)
