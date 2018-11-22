@@ -7,10 +7,17 @@ import {
   Popup,
   List,
   Image,
+  DatePickerField,
+  FormField,
+  SelectField,
+  InfoDialog,
   Text,
+  SearchBar,
   Title,
   Spin,
   FlexBox,
+  Card,
+  CountModal,
   Wrapper,
   Layout,
   Modal
@@ -40,7 +47,25 @@ storiesOf('List', module).add('Defaul', () => (
   </div>
 ));
 
+storiesOf('SelectField', module).add('Default', () => (
+  <SelectField meta={{}} />
+));
+
+storiesOf('InfoDialog', module).add('Default', () => <InfoDialog />);
+
+storiesOf('SearchBar', module).add('Default', () => <SearchBar />);
+
+storiesOf('DatePickerField', module).add('Default', () => <DatePickerField />);
+
+storiesOf('CountModal', module).add('Default', () => (
+  <CountModal text="hello world" count="1" icon={<CloseIcon />} />
+));
+
 storiesOf('Image', module).add('Default', () => <Image src={demoImage} />);
+
+storiesOf('FormField', module).add('Default', () => <FormField meta={{}} />);
+
+storiesOf('Card', module).add('Default', () => <Card />);
 
 storiesOf('Popup', module).add('Default', () => <Popup>Hell world</Popup>);
 

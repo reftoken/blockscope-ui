@@ -15,7 +15,11 @@ export default {
     'styled-components',
     'prop-types',
     '@material-ui/core',
-    '@material-ui/icons'
+    '@material-ui/icons',
+    'classnames',
+    'material-ui-flat-pagination',
+    'redux-form-material-ui',
+    'material-ui'
   ],
   plugins: [
     resolve(),
