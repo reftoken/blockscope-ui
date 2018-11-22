@@ -18,7 +18,4 @@ const defaultTheme = {
   theme: new Colors()
 };
 
-window.theme = defaultTheme.theme;
-window.lighten = lighten;
-window.darken = darken;
 export default defaultTheme;
