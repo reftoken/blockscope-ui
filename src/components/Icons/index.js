@@ -1,29 +1,31 @@
 import styled, { css } from 'styled-components';
-import MUIDashboardIcon from '@material-ui/icons/Dashboard';
-import MUIAccountIcon from '@material-ui/icons/AccountCircle';
-import MUIArchiveIcon from '@material-ui/icons/Archive';
-import MUILinkIcon from '@material-ui/icons/Link';
-import MUIPaymentIcon from '@material-ui/icons/Payment';
-import MUISettingsIcon from '@material-ui/icons/Settings';
-import MUISaveIcon from '@material-ui/icons/Save';
-import MUIMoneyIcon from '@material-ui/icons/AttachMoney';
-import MUIWalletIcon from '@material-ui/icons/AccountBalanceWallet';
-import MUICheckIcon from '@material-ui/icons/Check';
-import MUIDoneIcon from '@material-ui/icons/Done';
-import MUICloseIcon from '@material-ui/icons/Close';
-import MUIUsersIcon from '@material-ui/icons/SupervisorAccount';
-import MUIArrowBackIcon from '@material-ui/icons/ArrowBack';
-import MUIArrowForwardIcon from '@material-ui/icons/ArrowForward';
-import MUIInfoIcon from '@material-ui/icons/Info';
-import MUIWarningIcon from '@material-ui/icons/Warning';
-import MUIHelpIcon from '@material-ui/icons/Help';
-import MUIUpdateIcon from '@material-ui/icons/Update';
-import MUISwapIcon from '@material-ui/icons/SwapHorizontalCircle';
-import MUIDateRange from '@material-ui/icons/DateRange';
-import MUICheckCircleIcon from '@material-ui/icons/CheckCircle';
-import MUIAccountBalance from '@material-ui/icons/AccountBalance';
-import MUIAccessTime from '@material-ui/icons/AccessTime';
-import MUIFile from '@material-ui/icons/FileCopy';
+import {
+  Dashboard as MUIDashboardIcon,
+  AccountCircle as MUIAccountIcon,
+  Archive as MUIArchiveIcon,
+  Link as MUILinkIcon,
+  Payment as MUIPaymentIcon,
+  Settings as MUISettingsIcon,
+  Save as MUISaveIcon,
+  AttachMoney as MUIMoneyIcon,
+  AccountBalanceWallet as MUIWalletIcon,
+  Check as MUICheckIcon,
+  Done as MUIDoneIcon,
+  Close as MUICloseIcon,
+  SupervisorAccount as MUIUsersIcon,
+  ArrowBack as MUIArrowBackIcon,
+  ArrowForward as MUIArrowForwardIcon,
+  Info as MUIInfoIcon,
+  Warning as MUIWarningIcon,
+  Help as MUIHelpIcon,
+  Update as MUIUpdateIcon,
+  SwapHorizontalCircle as MUISwapIcon,
+  DateRange as MUIDateRange,
+  CheckCircle as MUICheckCircleIcon,
+  AccountBalance as MUIAccountBalance,
+  AccessTime as MUIAccessTime,
+  FileCopy as MUIFile
+} from '@material-ui/icons';
 
 const baseStyles = css`
   fill: ${props => (props.fill ? props.fill : 'white')} !important;
