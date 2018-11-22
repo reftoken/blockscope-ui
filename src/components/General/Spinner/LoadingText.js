@@ -22,5 +22,5 @@ vertical-align: text-bottom;
 }
 `;
 
-LoadingText.propTypes = defaultTheme;
+LoadingText.defaultProps = defaultTheme;
 export default LoadingText;
