@@ -57,7 +57,18 @@ storiesOf('Text', module)
     </div>
   ));
 
-storiesOf('Title', module).add('Default', () => <Title>Hello World!</Title>);
+storiesOf('Title', module).add('Default', () => (
+  <div>
+    <Title heading="1">Hello World!</Title>
+    <Title heading="2">Hello World!</Title>
+    <Title heading="3">Hello World!</Title>
+    <Title heading="4">Hello World!</Title>
+    <Title heading="5">Hello World!</Title>
+    <Title heading="6">Hello World!</Title>
+    <Title capitalize>capitalize</Title>
+    <Title center>center</Title>
+  </div>
+));
 
 storiesOf('Spin', module).add('Default', () => (
   <Spin animate>
