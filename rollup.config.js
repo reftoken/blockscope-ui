@@ -13,7 +13,9 @@ export default {
     'react',
     'react-dom',
     'styled-components',
-    'prop-types'
+    'prop-types',
+    '@material-ui/core',
+    '@material-ui/icons'
   ],
   plugins: [
     resolve(),
