@@ -1,9 +1,8 @@
 import styled from 'styled-components';
-import colors from '../../constants/colors';
 
 /* stylelint-disable selector-combinator-blacklist */
 const IconWrapper = styled.div`
-  background: ${colors.lightgray};
+  background: ${props => props.theme.black90};
   border-radius: 50%;
   height: 30px;
   width: 30px;
@@ -22,7 +21,7 @@ const IconWrapper = styled.div`
 
   :hover svg {
     opacity: 0.8;
-    fill: ${colors.error} !important;
+    fill: ${props => props.theme.error} !important;
   }
 `;
 /* stylelint-enable selector-combinator-blacklist */

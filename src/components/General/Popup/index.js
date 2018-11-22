@@ -5,9 +5,13 @@ import Dimmer from './Dimmer';
 import Wrapper from './Wrapper';
 import IconWrapper from './IconWrapper';
 import { CloseIcon } from '../../Icons';
+import defaultTheme from '../../../constants/defaultTheme';
+
+const { theme } = defaultTheme;
 
 const defaultProps = {
-  title: ''
+  title: '',
+  theme
 };
 
 const propTypes = {
@@ -16,8 +20,9 @@ const propTypes = {
   onClose: PropTypes.func.isRequired
 };
 
-const Popup = ({ title, children, onClose }) => (
+const Popup = ({ title, theme, children, onClose }) => (
   <Dimmer
+    theme={theme}
     onClick={event => {
       if (event.currentTarget !== event.target) {
         return;
@@ -25,12 +30,17 @@ const Popup = ({ title, children, onClose }) => (
       onClose(event);
     }}
   >
-    <Wrapper>
+    <Wrapper theme={theme}>
       <div>
-        <Title style={{ opacity: 0.4, margin: 0 }} center heading="2">
+        <Title
+          theme={theme}
+          style={{ opacity: 0.4, margin: 0 }}
+          center
+          heading="2"
+        >
           {title}
         </Title>
-        <IconWrapper>
+        <IconWrapper theme={theme}>
           <CloseIcon onClick={event => onClose(event)} />
         </IconWrapper>
       </div>
