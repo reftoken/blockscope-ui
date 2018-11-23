@@ -6,7 +6,7 @@ import defaultTheme from '../../../constants/defaultTheme';
 const CardText = styled(MUICardText)`
   display: flex;
   align-items: center;
-  background-color: ${props => lighten(0.1, props.theme.black90)};
+  background-color: ${props => lighten(0.09, props.theme.black90)};
 `;
 
 CardText.defaultProps = defaultTheme;

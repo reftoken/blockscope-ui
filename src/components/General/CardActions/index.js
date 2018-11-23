@@ -4,7 +4,7 @@ import defaultTheme from '../../../constants/defaultTheme';
 import { lighten } from 'polished';
 
 const CardActions = styled(MUICardActions)`
-  background-color: ${props => lighten(0.1, props.theme.black90)};
+  background-color: ${props => lighten(0.09, props.theme.black90)};
 `;
 
 CardActions.defaultProps = defaultTheme;
