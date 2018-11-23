@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import StepperStep from '@material-ui/core/Step';
+import { Step as StepperStep } from '@material-ui';
 import { lighten } from 'polished';
 import defaultTheme from '../../../constants/defaultTheme';
 

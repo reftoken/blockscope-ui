@@ -1,6 +1,6 @@
 import React, { Fragment } from 'react';
 import PropTypes from 'prop-types';
-import InputLabel from '@material-ui/core/InputLabel';
+import { InputLabel } from '@material-ui/core';
 import { Select } from 'redux-form-material-ui';
 
 import FormError from '../FormError';

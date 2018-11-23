@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import Checkbox from '@material-ui/core/Checkbox';
+import { Checkbox } from '@material-ui/core';
 
 /* stylelint-disable selector-combinator-blacklist */
 const CheckboxField = styled(Checkbox)`

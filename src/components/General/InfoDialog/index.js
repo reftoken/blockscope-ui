@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
-import Dialog from '@material-ui/core/Dialog';
-import IconButton from '@material-ui/core/IconButton';
-import Button from '@material-ui/core/Button';
-import Tooltip from '@material-ui/core/Tooltip';
+import { Dialog } from '@material-ui/core';
+import { IconButton } from '@material-ui/core';
+import { Button } from '@material-ui/core';
+import { Tooltip } from '@material-ui/core';
 import { InfoIcon, CheckIcon } from '../../Icons';
 import { Wrapper } from '../../Layout';
 import defaultTheme from '../../../constants/defaultTheme';

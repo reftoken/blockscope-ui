@@ -1,10 +1,10 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
-import Collapse from '@material-ui/core/Collapse';
-import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
+import { Collapse } from '@material-ui/core';
+import { ExpandMoreIcon } from '@material-ui/icons';
 import { IconButton } from '@material-ui/core';
-import * as classnames from 'classnames';
-import { withStyles } from '@material-ui/core/styles';
+import classnames from 'classnames';
+import { withStyles } from '@material-ui/core';
 import styles from './styles';
 import CardWrapper from './CardWrapper';
 import CardActions from '../CardActions';
