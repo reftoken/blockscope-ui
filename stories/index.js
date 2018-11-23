@@ -4,6 +4,8 @@ import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 import { storiesOf } from '@storybook/react';
 import { Provider } from 'react-redux';
 import Button from '@material-ui/core/Button';
+import MenuItem from '@material-ui/core/MenuItem';
+import { reduxForm, Form, Field } from 'redux-form';
 import {
   Spinner,
   CloseIcon,
@@ -61,9 +63,24 @@ storiesOf('List', module).add('Default', () => (
   </div>
 ));
 
-storiesOf('SelectField', module).add('Default', () => (
-  <SelectField meta={{}} />
-));
+storiesOf('SelectField', module)
+  .addDecorator(story => <Provider store={store}>{story()}</Provider>)
+  .add('Default', () => {
+    const SelectForm = () => (
+      <Form onSubmit={() => {}}>
+        <Field component={SelectField} name="selectField"
+      label="Select a number">
+          <MenuItem value={1}>1</MenuItem>
+          <MenuItem value={2}>2</MenuItem>
+          <MenuItem value={3}>3</MenuItem>
+        </Field>
+      </Form>
+    );
+
+    const WrappedSelectForm = reduxForm({ form: 'selectForm' })(SelectForm);
+
+    return <WrappedSelectForm />
+  });
 
 storiesOf('InfoDialog', module).add('Default', () => <InfoDialog />);
 
