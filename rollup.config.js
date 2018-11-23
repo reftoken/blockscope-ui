@@ -19,8 +19,7 @@ export default {
     'classnames',
     'material-ui-flat-pagination',
     'redux-form-material-ui',
-    'material-ui',
-    '@material-ui'
+    'material-ui'
   ],
   plugins: [
     resolve(),
