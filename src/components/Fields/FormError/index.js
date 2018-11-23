@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import withTheme from '@material-ui/core/styles/withTheme';
+import { withTheme } from '@material-ui/core/styles';
 import defaultTheme from '../../../constants/defaultTheme';
 
 const FormError = styled.p`

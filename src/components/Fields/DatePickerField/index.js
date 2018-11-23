@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import DatePicker from 'material-ui/DatePicker';
+import { DatePicker } from 'material-ui';
 
 const propTypes = {
   label: PropTypes.string,

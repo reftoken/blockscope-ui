@@ -1,4 +1,6 @@
 import React from 'react';
+import StepLabel from '@material-ui/core/StepLabel';
+import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 import { storiesOf } from '@storybook/react';
 import {
   Spinner,
@@ -8,8 +10,13 @@ import {
   List,
   Image,
   DatePickerField,
+  Stepper,
+  Step,
   FormField,
   SelectField,
+  CardActions,
+  CardText,
+  Pagination,
   InfoDialog,
   Text,
   SearchBar,
@@ -53,9 +60,23 @@ storiesOf('SelectField', module).add('Default', () => (
 
 storiesOf('InfoDialog', module).add('Default', () => <InfoDialog />);
 
+storiesOf('Pagination', module).add('Default', () => <Pagination />);
+
+storiesOf('Stepper', module).add('Default', () => (
+  <Stepper>
+    <Step>
+      <StepLabel>Hello world</StepLabel>
+    </Step>
+  </Stepper>
+));
+
 storiesOf('SearchBar', module).add('Default', () => <SearchBar />);
 
-storiesOf('DatePickerField', module).add('Default', () => <DatePickerField />);
+storiesOf('DatePickerField', module).add('Default', () => (
+  <MuiThemeProvider>
+    <DatePickerField />
+  </MuiThemeProvider>
+));
 
 storiesOf('CountModal', module).add('Default', () => (
   <CountModal text="hello world" count="1" icon={<CloseIcon />} />
@@ -65,7 +86,13 @@ storiesOf('Image', module).add('Default', () => <Image src={demoImage} />);
 
 storiesOf('FormField', module).add('Default', () => <FormField meta={{}} />);
 
-storiesOf('Card', module).add('Default', () => <Card />);
+storiesOf('Card', module).add('Default', () => (
+  <Card>
+    <CardActions>
+      <CardText>Hello</CardText>
+    </CardActions>
+  </Card>
+));
 
 storiesOf('Popup', module).add('Default', () => <Popup>Hell world</Popup>);
 
