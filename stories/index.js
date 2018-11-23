@@ -1,7 +1,9 @@
-import React from 'react';
+import React, { Fragment } from 'react';
 import StepLabel from '@material-ui/core/StepLabel';
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 import { storiesOf } from '@storybook/react';
+import { Provider } from 'react-redux';
+import Button from '@material-ui/core/Button';
 import {
   Spinner,
   CloseIcon,
@@ -27,9 +29,14 @@ import {
   CountModal,
   Wrapper,
   Layout,
-  Modal
+  Modal,
+  Snackbar,
+  withSnackbar,
+  createStore,
 } from '../src';
 import demoImage from '../static/demo.jpg';
+
+const store = createStore();
 
 storiesOf('Spinner', module)
   .add('Default', () => <Spinner />)
@@ -38,7 +45,7 @@ storiesOf('Spinner', module)
 storiesOf('MobileMenu', module)
   .add('Default', () => <MobileMenu />)
   .add('With props', () => <MobileMenu collapsed />);
-storiesOf('List', module).add('Defaul', () => (
+storiesOf('List', module).add('Default', () => (
   <div>
     <List>
       <li>One</li>
@@ -151,3 +158,21 @@ storiesOf('Modal', module).add('Default', () => (
     <Image src={demoImage} />
   </Modal>
 ));
+
+storiesOf('Snackbar', module)
+  .addDecorator(story => <Provider store={store}>{story()}</Provider>)
+  .add('Default', () => {
+    const SnackbarWrapper = ({ openSnackbar }) => (
+      <Fragment>
+        <Button onClick={() => openSnackbar({ message: 'Information', type: 'info' })}>Information</Button>
+        <Button onClick={() => openSnackbar({ message: 'Success', type: 'success' })}>Success</Button>
+        <Button onClick={() => openSnackbar({ message: 'Warning', type: 'warning' })}>Warning</Button>
+        <Button onClick={() => openSnackbar({ message: 'Error', type: 'error' })}>Error</Button>
+        <Snackbar />
+      </Fragment>
+    );
+
+    const WrappedSnackbar = withSnackbar(SnackbarWrapper);
+
+    return <WrappedSnackbar />
+  });

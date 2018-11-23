@@ -41,6 +41,7 @@
     "@storybook/addon-actions": "^4.0.4",
     "@storybook/addon-options": "^4.0.4",
     "@storybook/react": "^4.0.4",
+    "babel-eslint": "^10.0.1",
     "babel-loader": "^8.0.4",
     "babel-plugin-styled-components": "^1.8.0",
     "eslint": "^5.9.0",
@@ -71,6 +72,9 @@
     "prop-types": "^15.6.2",
     "react": "^16.6.1",
     "react-dom": "^16.6.1",
+    "react-redux": "^5.1.1",
+    "redux": "^4.0.1",
+    "redux-thunk": "^2.3.0",
     "redux-form-material-ui": "^4.3.4",
     "styled-components": "^4.0.3"
   }

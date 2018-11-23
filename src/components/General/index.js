@@ -1,5 +1,6 @@
 export { default as Spinner } from './Spinner';
 export { default as Popup } from './Popup';
+export { default as Snackbar } from './Snackbar';
 export { default as Card } from './Card';
 export { default as CardActions } from './CardActions';
 export { default as CardText } from './CardText';
