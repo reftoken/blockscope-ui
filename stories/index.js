@@ -1,4 +1,6 @@
 import React, { Fragment } from 'react';
+import StepLabel from '@material-ui/core/StepLabel';
+import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 import { storiesOf } from '@storybook/react';
 import { Provider } from 'react-redux';
 import Button from '@material-ui/core/Button';
@@ -9,10 +11,22 @@ import {
   Popup,
   List,
   Image,
+  DatePickerField,
+  Stepper,
+  Step,
+  FormField,
+  SelectField,
+  CardActions,
+  CardText,
+  Pagination,
+  InfoDialog,
   Text,
+  SearchBar,
   Title,
   Spin,
   FlexBox,
+  Card,
+  CountModal,
   Wrapper,
   Layout,
   Modal,
@@ -47,7 +61,45 @@ storiesOf('List', module).add('Default', () => (
   </div>
 ));
 
+storiesOf('SelectField', module).add('Default', () => (
+  <SelectField meta={{}} />
+));
+
+storiesOf('InfoDialog', module).add('Default', () => <InfoDialog />);
+
+storiesOf('Pagination', module).add('Default', () => <Pagination />);
+
+storiesOf('Stepper', module).add('Default', () => (
+  <Stepper>
+    <Step>
+      <StepLabel>Hello world</StepLabel>
+    </Step>
+  </Stepper>
+));
+
+storiesOf('SearchBar', module).add('Default', () => <SearchBar />);
+
+storiesOf('DatePickerField', module).add('Default', () => (
+  <MuiThemeProvider>
+    <DatePickerField />
+  </MuiThemeProvider>
+));
+
+storiesOf('CountModal', module).add('Default', () => (
+  <CountModal text="hello world" count="1" icon={<CloseIcon />} />
+));
+
 storiesOf('Image', module).add('Default', () => <Image src={demoImage} />);
+
+storiesOf('FormField', module).add('Default', () => <FormField meta={{}} />);
+
+storiesOf('Card', module).add('Default', () => (
+  <Card>
+    <CardActions>
+      <CardText>Hello</CardText>
+    </CardActions>
+  </Card>
+));
 
 storiesOf('Popup', module).add('Default', () => <Popup>Hell world</Popup>);
 
