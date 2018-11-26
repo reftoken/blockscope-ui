@@ -18,6 +18,7 @@ import {
   Step,
   FormField,
   SelectField,
+  FormError,
   CardActions,
   CardText,
   Pagination,
@@ -34,7 +35,7 @@ import {
   Modal,
   Snackbar,
   withSnackbar,
-  createStore,
+  createStore
 } from '../src';
 import demoImage from '../static/demo.jpg';
 
@@ -68,8 +69,11 @@ storiesOf('SelectField', module)
   .add('Default', () => {
     const SelectForm = () => (
       <Form onSubmit={() => {}}>
-        <Field component={SelectField} name="selectField"
-      label="Select a number">
+        <Field
+          component={SelectField}
+          name="selectField"
+          label="Select a number"
+        >
           <MenuItem value={1}>1</MenuItem>
           <MenuItem value={2}>2</MenuItem>
           <MenuItem value={3}>3</MenuItem>
@@ -79,10 +83,14 @@ storiesOf('SelectField', module)
 
     const WrappedSelectForm = reduxForm({ form: 'selectForm' })(SelectForm);
 
-    return <WrappedSelectForm />
+    return <WrappedSelectForm />;
   });
 
 storiesOf('InfoDialog', module).add('Default', () => <InfoDialog />);
+
+storiesOf('FormError', module).add('Default', () => (
+  <FormError>Error</FormError>
+));
 
 storiesOf('Pagination', module).add('Default', () => <Pagination />);
 
@@ -181,15 +189,31 @@ storiesOf('Snackbar', module)
   .add('Default', () => {
     const SnackbarWrapper = ({ openSnackbar }) => (
       <Fragment>
-        <Button onClick={() => openSnackbar({ message: 'Information', type: 'info' })}>Information</Button>
-        <Button onClick={() => openSnackbar({ message: 'Success', type: 'success' })}>Success</Button>
-        <Button onClick={() => openSnackbar({ message: 'Warning', type: 'warning' })}>Warning</Button>
-        <Button onClick={() => openSnackbar({ message: 'Error', type: 'error' })}>Error</Button>
+        <Button
+          onClick={() => openSnackbar({ message: 'Information', type: 'info' })}
+        >
+          Information
+        </Button>
+        <Button
+          onClick={() => openSnackbar({ message: 'Success', type: 'success' })}
+        >
+          Success
+        </Button>
+        <Button
+          onClick={() => openSnackbar({ message: 'Warning', type: 'warning' })}
+        >
+          Warning
+        </Button>
+        <Button
+          onClick={() => openSnackbar({ message: 'Error', type: 'error' })}
+        >
+          Error
+        </Button>
         <Snackbar />
       </Fragment>
     );
 
     const WrappedSnackbar = withSnackbar(SnackbarWrapper);
 
-    return <WrappedSnackbar />
+    return <WrappedSnackbar />;
   });
