@@ -18,6 +18,10 @@ export default {
     '@material-ui/icons',
     'classnames',
     'material-ui-flat-pagination',
+    'redux-thunk',
+    'redux',
+    'react-redux',
+    'redux-form',
     'redux-form-material-ui',
     'material-ui'
   ],

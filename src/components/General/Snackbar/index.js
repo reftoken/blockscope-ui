@@ -1,9 +1,8 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
-import IconButton from '@material-ui/core/IconButton';
-import CloseIcon from '@material-ui/icons/Close';
-import { SnackbarContent } from '@material-ui/core';
+import { Close as CloseIcon } from '@material-ui/icons';
+import { IconButton, SnackbarContent } from '@material-ui/core';
 import StyledSnackbar from './StyledSnackbar';
 import defaultTheme from '../../../constants/defaultTheme';
 import * as actions from '../../../state/snackbar/actions';

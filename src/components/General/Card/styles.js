@@ -1,4 +1,4 @@
-import red from '@material-ui/core/colors/red';
+import { colors } from '@material-ui/core';
 
 const styles = theme => ({
   card: {
@@ -28,7 +28,7 @@ const styles = theme => ({
     transform: 'rotate(180deg)'
   },
   avatar: {
-    backgroundColor: red[500]
+    backgroundColor: colors.red[500]
   }
 });
 
