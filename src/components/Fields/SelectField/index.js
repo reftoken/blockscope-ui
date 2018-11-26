@@ -2,6 +2,7 @@ import React, { Fragment } from 'react';
 import PropTypes from 'prop-types';
 import { InputLabel } from '@material-ui/core';
 import { Select } from 'redux-form-material-ui';
+import defaultTheme from '../../../constants/defaultTheme';
 
 import FormError from '../FormError';
 
@@ -12,7 +13,7 @@ const propTypes = {
   meta: PropTypes.object
 };
 
-const SelectField = ({ label, meta: { touched, error }, ...props }) => {
+const SelectField = ({ theme, label, meta: { touched, error }, ...props }) => {
   return (
     <Fragment>
       <InputLabel>{label}</InputLabel>
@@ -24,10 +25,12 @@ const SelectField = ({ label, meta: { touched, error }, ...props }) => {
         // onChange={(_1, _2, value) => input.onChange(value)}
       />
 
-      {error && <FormError>{error}</FormError>}
+      {error && <FormError theme={theme}>{error}</FormError>}
     </Fragment>
   );
 };
+
+SelectField.defaultProps = defaultTheme;
 
 SelectField.propTypes = propTypes;
 
