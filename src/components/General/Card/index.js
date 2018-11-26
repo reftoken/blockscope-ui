@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import { Collapse } from '@material-ui/core';
-import { ExpandMoreIcon } from '@material-ui/icons';
+import { ExpandMore as ExpandMoreIcon } from '@material-ui/icons';
 import { IconButton } from '@material-ui/core';
 import classnames from 'classnames';
 import { withStyles } from '@material-ui/core';
