@@ -17,13 +17,7 @@ const SelectField = ({ theme, label, meta: { touched, error }, ...props }) => {
   return (
     <Fragment>
       <InputLabel>{label}</InputLabel>
-      <Select
-        error={touched && !!error}
-        fullWidth
-        // {...input}
-        {...props}
-        // onChange={(_1, _2, value) => input.onChange(value)}
-      />
+      <Select error={touched && !!error} fullWidth {...props} />
 
       {error && <FormError theme={theme}>{error}</FormError>}
     </Fragment>
