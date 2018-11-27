@@ -5,5 +5,9 @@ const baseStyles = css`
   list-style-position: inside;
 `;
 
-export const UnorderedList = styled.ul`baseStyles`;
-export const OrderedList = styled.ol`baseStyles`;
+export const UnorderedList = styled.ul`
+  ${baseStyles}
+`;
+export const OrderedList = styled.ol`
+  ${baseStyles}
+`;
