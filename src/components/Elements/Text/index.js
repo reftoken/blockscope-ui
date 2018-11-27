@@ -4,7 +4,7 @@ import defaultTheme from '../../../constants/defaultTheme';
 const Text = styled.p`
   color: ${props => (props.error ? props.theme.error : props.theme.primary)};
   text-align: ${props => (props.center ? 'center' : 'left')};
-  margin: ${props => (props.margin ? props.margin : 0)}px;
+  margin: 0px;
   font-size: ${props => (props.size ? props.size : 'medium')}
     ${props =>
       props.status &&

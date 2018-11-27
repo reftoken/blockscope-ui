@@ -6,10 +6,8 @@ const FlexBox = styled.div`
   justify-content: ${props => (props.justify ? props.justify : 'flex-start')};
   align-items: ${props => (props.align ? props.align : 'stretch')};
   flex-direction: ${props => (props.direction ? props.direction : 'row')};
-  max-width: ${props => (props.width ? props.width : 'none')};
-  margin: ${props => (props.margin ? props.margin : 0)};
-  padding: ${props => (props.padding ? props.padding : 0)};
-  height: ${props => (props.height ? props.height : 'auto')};
+  margin: 0;
+  padding: 0;
 `;
 
 export default FlexBox;
