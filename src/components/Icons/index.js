@@ -24,7 +24,10 @@ import {
   CheckCircle as MUICheckCircleIcon,
   AccountBalance as MUIAccountBalance,
   AccessTime as MUIAccessTime,
-  FileCopy as MUIFile
+  FileCopy as MUIFile,
+  UnfoldMore as MUIUnfoldMore,
+  ExpandMore as MUIExpandMore,
+  ExpandLess as MUIExpandLess,
 } from '@material-ui/icons';
 
 const baseStyles = css`
@@ -131,5 +134,17 @@ export const HelpIcon = styled(MUIHelpIcon)`
 `;
 
 export const UpdateIcon = styled(MUIUpdateIcon)`
+  ${baseStyles}
+`;
+
+export const SortIcon = styled(MUIUnfoldMore)`
+  ${baseStyles}
+`;
+
+export const DescendingIcon = styled(MUIExpandMore)`
+  ${baseStyles}
+`;
+
+export const AscendingIcon = styled(MUIExpandLess)`
   ${baseStyles}
 `;
