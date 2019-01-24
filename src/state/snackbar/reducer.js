@@ -3,7 +3,7 @@ import * as types from './types';
 export default (
   state = {
     message: '',
-    type: '',
+    type: 'info',
     open: false,
     queue: [],
   },
