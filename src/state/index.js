@@ -13,4 +13,5 @@ const createStoreWithMiddleware = applyMiddleware(thunk)(createReduxStore)
 
 export const createStore = () => createStoreWithMiddleware(rootReducer);
 
+export { openSnackbar } from './snackbar/actions';
 export { default as snackbarReducer } from './snackbar/reducer';
